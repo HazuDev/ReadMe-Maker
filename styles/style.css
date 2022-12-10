@@ -1,0 +1,88 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#Background {
+    background-image: url("Background.png");
+
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+    height: 104%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+
+    animation: Start-Background 0.2s linear forwards;
+}
+
+@keyframes Start-Background {
+    0% {filter: blur(0px); -webkit-filter: blur(0px); height: 104%; opacity: 0;}
+    100% {filter: blur(7px); -webkit-filter: blur(7px); height: 100%; opacity: 1;}
+}
+
+#root {
+    background-color: rgb(24, 24, 24);
+    background-color: rgba(24, 24, 24, 0.8);
+
+    color: white;
+    font-weight: bold;
+
+    border: 3px solid #f1f1f1;
+    position: absolute;
+
+    top: 140%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 30%;
+    height: 80%;
+
+    padding: 20px;
+
+    z-index: 2;
+    text-align: center;
+
+    opacity: 0;
+
+    animation: Start-Root 0.2s linear forwards;
+}
+
+@keyframes Start-Root {
+    0% {opacity: 0; top: 140%;}
+    75% {opacity: 0.75; top: 45%;}
+    100% {opacity: 1; top: 50%;}
+}
+
+#Main-Box {
+    width: 100%;
+    height: 125%;
+    
+    padding: 20px;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid #f1f1f1;
+
+    z-index: 3;
+    text-align: center;
+}
+
+#Main-Textarea {
+    width: 100%;
+    height: 100%;
+}
